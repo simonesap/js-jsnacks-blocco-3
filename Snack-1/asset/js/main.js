@@ -36,16 +36,25 @@
 
 // BANCOMAT
 
-let somma = 0;
+let arrayVuoto = [];
+
+let somma = 50;
 
 let i = 0;
 
-do {
-    let somma =  numeroRichiesto
-    var numeroRichiesto = prompt('Quanto desidera prelevare?');
-    somma.push(numeroRichiesto);
-    i++;
-} while (numeroRichiesto <= 50 && somma < 50);
+let numeroRichiesto = parseInt(prompt('Quanto desidera prelevare?'));
 
-document.getElementById('numero').innerHTML = `"STOP!! Hai superato il limite di prelievo giornaliero (50)." ${somma}`;
+let sommaTotale =  parseInt(somma - numeroRichiesto)
+console.log(sommaTotale);
+    
+    arrayVuoto.push(numeroRichiesto);
+    i++;
+while (numeroRichiesto < 50 && somma < 50) {
+    let nuovoNum = parseInt(prompt('Quanto ancora desidera prelevare?'));
+    nuovoNumTotale = sommaTotale - nuovoNum;
+    arrayVuoto.push(nuovoNumTotale);
+    console.log(arrayVuoto);
+}
+
+document.getElementById('numero').innerHTML = `"STOP!! Hai superato il limite di prelievo giornaliero (50)." ${arrayVuoto}`;
 

@@ -11,8 +11,16 @@
 // //     let random = Math.floor(Math.random())
 // // }
 
+let i = 0;
+
 do {
-    var numeroRichiesto = prompt('Scrivi un numero');
-} while (numeroRichiesto < 50);
-console.log(numeroRichiesto)
-document.getElementById('numero').innerHTML = `${numeroRichiesto}`;
+    let n = prompt('Scrivi un numero');
+    console.log(n)
+    let arrayVuoto = [];
+    let numRandom = Math.floor(Math.random()*100);
+    arrayVuoto.push(numRandom) * 10;
+    console.log(arrayVuoto) * 10;
+    i++;
+} while (i < 10);
+
+document.getElementById('numero').innerHTML = `${arrayVuoto}`;
