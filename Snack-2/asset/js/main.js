@@ -11,16 +11,32 @@
 // //     let random = Math.floor(Math.random())
 // // }
 
+
+// let i = 0;
+
+// do {
+//     let n = prompt('Scrivi un numero');
+//     console.log(n)
+//     let arrayVuoto = [];
+//     let numRandom = Math.floor(Math.random()*100);
+//     arrayVuoto.push(numRandom) * 10;
+//     console.log(arrayVuoto) * 10;
+//     i++;
+// } while (i < 10);
+
+// document.getElementById('numero').innerHTML = `${arrayVuoto}`;
+
+
+
+const n = parseInt(prompt('Inserisci un numero'));
+
 let i = 0;
 
-do {
-    let n = prompt('Scrivi un numero');
-    console.log(n)
-    let arrayVuoto = [];
-    let numRandom = Math.floor(Math.random()*100);
-    arrayVuoto.push(numRandom) * 10;
-    console.log(arrayVuoto) * 10;
+while (i < n) {
+    let newArray = [];
+    for (let y = 0; y < 10; y++) {
+        newArray.push(Math.floor(Math.random() * 100) + 1);
+    }
+    console.log(newArray);
     i++;
-} while (i < 10);
-
-document.getElementById('numero').innerHTML = `${arrayVuoto}`;
+}
